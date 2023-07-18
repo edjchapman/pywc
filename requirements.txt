@@ -1,0 +1,31 @@
+# Python linting
+# https://pypi.org/project/black/
+black==23.9.1
+
+# Create CLIs
+# https://pypi.org/project/click/
+click==8.1.7
+
+## Flake8 - Tool For Style Guide Enforcement.
+# https://flake8.pycqa.org/en/latest/
+flake8==6.1.0
+
+## Isort - A Python utility / library to sort imports.
+# https://pycqa.github.io/isort/
+isort==5.12.0
+
+# Pre-commit hook framework
+# https://pypi.org/project/pre-commit/
+pre-commit==3.5.0
+
+# Python test framework
+# https://docs.pytest.org
+pytest==7.4.2
+
+## Twine is a utility for publishing Python packages on PyPI
+# https://pypi.org/project/twine/
+twine==4.0.2
+
+## Python Wheel Packaging
+# https://pypi.org/project/wheel/
+wheel==0.41.2
