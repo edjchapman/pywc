@@ -2,6 +2,10 @@
 # https://pypi.org/project/black/
 black==23.7.0
 
+# Create CLIs
+# https://pypi.org/project/click/
+click==8.1.6
+
 # Pre-commit hook framework
 # https://pypi.org/project/pre-commit/
 pre-commit==3.3.3
