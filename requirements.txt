@@ -1,0 +1,11 @@
+# Python linting
+# https://pypi.org/project/black/
+black==23.7.0
+
+# Pre-commit hook framework
+# https://pypi.org/project/pre-commit/
+pre-commit==3.3.3
+
+# Python test framework
+# https://docs.pytest.org
+pytest==7.4.0
