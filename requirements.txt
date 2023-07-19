@@ -13,3 +13,5 @@ pre-commit==3.3.3
 # Python test framework
 # https://docs.pytest.org
 pytest==7.4.0
+
+wheel==0.40.0
