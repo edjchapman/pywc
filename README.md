@@ -1,6 +1,8 @@
 # pywc
 Python implementation of the UNIX wc (Word Count) utility
 
+https://test.pypi.org/project/pywc/
+
 ---
 ## Development
 
