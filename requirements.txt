@@ -14,10 +14,6 @@ flake8==6.1.0
 # https://pycqa.github.io/isort/
 isort==5.12.0
 
-# Create CLIs
-# https://pypi.org/project/click/
-click==8.1.6
-
 # Pre-commit hook framework
 # https://pypi.org/project/pre-commit/
 pre-commit==3.5.0
