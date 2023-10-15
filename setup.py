@@ -7,7 +7,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pywc",
-    version="0.0.2",
+    version="0.0.3",
     author="Ed Chapman",
     author_email="ed@edchapman.co.uk",
     license="MIT",
@@ -15,7 +15,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/edjchapman/pywc",
-    py_modules=["pywc", "app"],
+    py_modules=["pywc"],
     packages=setuptools.find_packages(),
     install_requires=[requirements],
     python_requires=">=3.7",
@@ -23,8 +23,9 @@ setuptools.setup(
         "Programming Language :: Python :: 3.9",
         "Operating System :: OS Independent",
     ],
-    entry_points="""
-        [console_scripts]
-        pywc=pywc:cli
-    """,
+    entry_points={
+        "console_scripts": [
+            "pywc = pywc.cli:cli",
+        ],
+    },
 )
