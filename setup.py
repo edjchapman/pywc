@@ -7,7 +7,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pywc",
-    version="0.0.3",
+    version="0.0.4",
     author="Ed Chapman",
     author_email="ed@edchapman.co.uk",
     license="MIT",
@@ -25,7 +25,7 @@ setuptools.setup(
     ],
     entry_points={
         "console_scripts": [
-            "pywc = pywc.cli:cli",
+            "pywc = pywc.cli:wc",
         ],
     },
 )
