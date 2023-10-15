@@ -6,7 +6,7 @@ def cli():
     pass
 
 
-@cli.command()
+@cli.command(name="hello")
 @click.option("-n", "--name", type=str, help="Name to greet", default="World")
 def hello(name):
     click.echo(f"Hello {name}")
