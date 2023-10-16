@@ -1,6 +1,28 @@
-import os.path
+import os
+from typing import Optional, Tuple
 
 import click
+
+
+def handle_file_input(file: Optional[os.PathLike] = None) -> Tuple[str, str]:
+    """
+    Retrieve content from a given file or stdin if no file is specified.
+
+    Returns:
+        tuple:
+            content (str): The content of the file or stdin.
+            source_name (str): The base name of the file or 'stdin' if data was read from stdin.
+    """
+
+    if file:
+        with open(file, "r") as f:
+            content = f.read()
+        source_name = os.path.basename(file)
+    else:
+        content = click.get_text_stream("stdin").read()
+        source_name = "stdin"
+
+    return content, source_name
 
 
 @click.command(
@@ -34,13 +56,10 @@ Examples:
     is_flag=True,
     help="Count the number of bytes in the specified file.",
 )
-@click.argument("file", type=click.Path(exists=True, readable=True))
+@click.argument("file", type=click.Path(exists=True, readable=True), required=False)
 def wc(lines, words, bytes_, file):
     """Command logic remains the same as before."""
-    file_basename = os.path.basename(file)
-
-    with open(file, "r") as f:
-        content = f.read()
+    content, file_basename = handle_file_input(file)
 
     if lines:
         line_count = len(content.splitlines())
