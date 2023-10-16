@@ -7,7 +7,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pywc",
-    version="0.0.5",
+    version="1.0.0",
     author="Ed Chapman",
     author_email="ed@edchapman.co.uk",
     license="MIT",
