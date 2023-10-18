@@ -20,10 +20,11 @@ Usage: pywc [OPTIONS] [FILE]
   bytes in a file.
 
   Examples:
-      wc --lines sample.txt      # Counts lines in sample.txt
-      wc --words sample.txt      # Counts words in sample.txt
-      wc --bytes sample.txt      # Counts bytes in sample.txt
-      wc sample.txt              # Counts lines, words, and bytes in sample.txt
+      pywc --lines sample.txt      # Counts lines in sample.txt
+      pywc --words sample.txt      # Counts words in sample.txt
+      pywc --bytes sample.txt      # Counts bytes in sample.txt
+      pywc sample.txt              # Counts lines, words, and bytes in sample.txt
+      cat sample.txt | pywc        # Pipe the output of another command as input
 
 Options:
   -l, --lines  Count the number of lines in the specified file.
