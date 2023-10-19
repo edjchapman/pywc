@@ -25,7 +25,7 @@ setuptools.setup(
     ],
     entry_points={
         "console_scripts": [
-            "pywc = pywc.cli:wc",
+            "pywc = pywc.main:wc",
         ],
     },
 )

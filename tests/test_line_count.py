@@ -2,7 +2,7 @@ import pathlib
 
 from click.testing import CliRunner
 
-from pywc.cli import wc
+from pywc.main import wc
 
 
 def test_line_count_of_file():

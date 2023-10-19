@@ -3,7 +3,7 @@ import pathlib
 import click
 from click.testing import CliRunner
 
-from pywc.cli import handle_file_input
+from pywc.main import handle_file_input
 
 
 def test_handle_file_with_file_input(tmpdir):
