@@ -9,14 +9,14 @@
 # https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
 
 
-name: Upload Python Package
+name: Publish to PyPI
 
 on:
   release:
     types: [published]
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
