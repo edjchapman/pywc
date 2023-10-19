@@ -1,31 +1,41 @@
-import setuptools
+from setuptools import find_packages, setup
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
-with open("requirements.txt", "r", encoding="utf-8") as fh:
-    requirements = fh.read()
-
-setuptools.setup(
+setup(
     name="pywc",
-    version="1.0.0",
+    version="0.1.0",
+    description="Python implementation of the UNIX wc (Word Count) utility",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
     author="Ed Chapman",
     author_email="ed@edchapman.co.uk",
-    license="MIT",
-    description="Python implementation of the UNIX wc (Word Count) utility",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
     url="https://github.com/edjchapman/pywc",
-    py_modules=["pywc"],
-    packages=setuptools.find_packages(),
-    install_requires=[requirements],
-    python_requires=">=3.7",
+    packages=find_packages(),
     classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "Topic :: Software Development :: Build Tools",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
-        "Operating System :: OS Independent",
     ],
-    entry_points={
-        "console_scripts": [
-            "pywc = pywc.main:wc",
+    keywords="cli tool wc word count",
+    install_requires=[
+        "click>=8.0",
+    ],
+    extras_require={
+        "dev": [
+            "pytest>=7.0",
+            "flake8>=6.0",
+            "isort>=5.12",
         ],
     },
+    entry_points={
+        "console_scripts": [
+            "pywc=pywc.main:wc",
+        ],
+    },
+    python_requires=">=3.6",
 )
