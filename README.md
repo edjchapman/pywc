@@ -1,7 +1,9 @@
-# pywc
+PYWC
+====
+
 Python implementation of the UNIX wc (Word Count) utility
 
-https://test.pypi.org/project/pywc/
+https://pypi.org/project/ed-pywc/
 
 ---
 
@@ -9,7 +11,7 @@ https://test.pypi.org/project/pywc/
 
 Installation
 ```shell
-pip install pywc
+pip install ed-pywc
 ```
 
 Usage

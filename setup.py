@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="ed-pywc",
-    version="0.4.0",
+    version="1.0.0",
     description="Python implementation of the UNIX wc (Word Count) utility",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
